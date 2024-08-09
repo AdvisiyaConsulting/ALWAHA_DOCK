@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <template id="teacher_identity_card">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+
+                    <style>
+                        @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&amp;display=swap");
+                        @import url('https://fonts.googleapis.com/css2?family=Mirza:wght@400;600&amp;display=swap');
+                        * {
+                            margin: 0;
+                            font-family: 'Quicksand', sans-serif;
+                            color: #eeeeee;
+                        }
+
+                        body {
+                            direction: rtl !important;
+                            height: 100vh;
+                        }
+                        h1 {
+                            text-align: center;
+                            color: #eeeee !important;
+                            font-size: 32px;
+                            padding: 15px 0;
+                        }
+
+
+                        .page {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin: 0 auto;
+                        }
+
+                        img {
+                            width: 230px;
+                            height: 230px;
+                            object-fit: cover;
+                            border-radius: 20px;
+                            text-align: center;
+                            margin-left: 30px;
+                            box-shadow: 2px 2px 0px -1px rgba(223,156,20,1);
+                            box-shadow: 5px 5px 0px -1px rgba(255, 180, 29, 1);
+                        }
+
+                        .name {
+                            font-weight: bold;
+                            font-size: 28px;
+                            text-align: center;
+                            margin-left: 6px;
+                            margin-bottom: 8px;
+                        }
+
+                        .card {
+                            width: 650px;
+                            height: 400px;
+                            border-radius: 20px;
+                            background-image: url("https://i.ibb.co/yVKpV2j/id-card-bg.png");
+                            background-size: cover;
+                            margin: auto;
+                        }
+
+                        .card-body {
+                            width: 650px;
+                            height: 300px;
+                            background-image: url("https://i.ibb.co/LPmYqLt/id-card-bg2.png") !important;
+                            background-size: cover;
+                            padding-top: 20px;
+                            position: relative;
+                        }
+
+                        .arabic {
+                            font-family: 'Mirza', serif;
+                            color: #151515;
+                        }
+
+                        .info {
+                            text-align: right !important;
+                            width: 300px;
+                        }
+
+                        .inscription {
+                            background-color: rgba(223,156,20,0.5);
+                            width: 100%;
+                        }
+
+                        .barcode {
+                            width: 273px;
+                            height: 127px;
+                            position: absolute;
+                            bottom: 20px;
+                            left: 20px;
+                        }
+
+                    </style>
+
+                    <div class="page" >
+                        <div class="oe_structure"/>
+                        <t t-foreach="o" t-as="teacher">
+                        <div class="card">
+                            <h1>
+                                <strong>
+                                    <span t-field="teacher.sudo().school_id.name" />
+                                </strong>
+                                <span>Teacher ID card</span>
+                            </h1>
+
+                        <div class="card-body-container">
+                        <table class="card-body">
+                            <tr>
+                            </tr>
+                            <tr>
+                                <td rowspan="2">
+                                    <img t-if="teacher.avatar_128"
+                                        t-att-src="'data:image/png;base64,%s' % to_text(teacher.avatar_128)"/>
+                                </td>
+                                <td>
+                                    <table class="info">
+                                        <tr>
+                                            <td>
+                                                <span class="name arabic" t-field="teacher.name"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong class="arabic">الجنس</strong>
+                                            </td>
+                                            <td>
+                                                <span class="arabic" t-field="teacher.gender"/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong class="arabic">تاريخ الميلاد</strong>
+                                            </td>
+                                            <td>
+                                                <span class="arabic" t-field="teacher.birthday" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong class="arabic">المواد</strong>
+                                            </td>
+                                            <td>
+                                                <t t-foreach="teacher.subject_id" t-as="subject">
+                                                <span class="arabic" t-field="subject.name"/>
+                                                </t>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong class="arabic">النظام</strong>
+                                            </td>
+                                            <td>
+                                                <t t-foreach="teacher.standard_id" t-as="standard">
+                                                <span class="arabic" t-field="standard.name"/>
+                                                </t>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <strong class="arabic">البريد الالكتروني</strong>
+                                            </td>
+                                            <td>
+                                                <span class="arabic" t-field="teacher.work_email" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <strong class="arabic">رقم الهاتف</strong>
+                                            </td>
+                                            <td>
+                                                <span class="arabic" t-field="teacher.mobile_phone" />
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                        </div>
+                        </div>
+                      </t>
+                   </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

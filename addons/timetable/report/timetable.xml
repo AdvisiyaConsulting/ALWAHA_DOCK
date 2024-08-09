@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="timetable">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <style>
+                            body{direction: rtl !important;}
+                            h4 {
+                                color: #151515 !important;
+                                font-size: 32px;
+                            }
+                        </style>
+                        <div class="oe_structure" /><br/><br/>
+                        <t t-if="o.timetable_type == 'exam'">
+                            <strong style="text-align: center;"><h4>Exam Timetable</h4></strong><br/>
+                        </t>
+                         <t t-if="o.timetable_type == 'regular'">
+                            <strong style="text-align: center;"><h4>Regular Timetable</h4></strong><br/>
+                        </t>
+                        <style>
+                            @import url('https://fonts.googleapis.com/css2?family=Mirza:wght@400;600&amp;display=swap');
+
+                            body{direction: rtl !important;}
+                            * {
+                                color: #f8fbfa;
+                                font-family: 'Mirza', serif;
+                            }
+
+                            table {
+                                border: none !important;
+                                border-collapse: separate;
+                                border-spacing: 3px;
+                            }
+
+                            table tr td, table tr th {
+                                border-radius: 10px;
+                                background-color: rgba(25,94,161,0.5);
+                                border: none !important;
+                                padding: 10px 20px;
+                                margin: 15px;
+                            }
+
+                            .table-header {
+                                background-color: rgba(25,94,161,0.7) !important;
+                            }
+                        </style>
+                        <div class="row" align="center">
+                            <table width="100%" style="border: 2px solid black;">
+                                <tr>
+                                    <td class="table-header" width="20%" align="center" >
+                                        <b>Academic Year</b>
+                                    </td>
+                                    <td class="table-header" width="20%" align="center" >
+                                        <b>Standard</b>
+                                    </td>
+                                    <td class="table-header" width="20%" align="center" >
+                                        <b>Division</b>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td width="20%" align="center" >
+                                        <span t-field="o.year_id.name"></span>
+                                    </td>
+                                    <td width="20%" align="center" >
+                                        <span t-field="o.standard_id.standard_id.name"></span>
+                                    </td>
+                                    <td width="20%" align="center" >
+                                        <span t-field="o.standard_id.division_id.name"></span>
+                                    </td>
+<!--                                    <td width="20%" align="center" >-->
+<!--                                        <span t-field="o.standard_id.medium_id.name"></span>-->
+<!--                                    </td>-->
+                                </tr>
+
+                                <tr style="border: 0px;">
+                                    <td colspan="4" style="border: 0px; background: none;">
+                                        <t t-if="o.timetable_type == 'regular'">
+                                            <br/>
+                                            <table width="100%" style="border: 0px; ">
+                                                <tr style="border: 0px;">
+                                                    <td class="table-header time" width="20%" align="center" >
+                                                        <b>Time</b>
+                                                    </td>
+                                                     <td class="table-header" align="center" >
+                                                        <b>Saturday</b>
+                                                    </td>
+                                                    <td class="table-header" align="center" >
+                                                        <b>Sunday</b>
+                                                    </td>
+                                                    <td class="table-header" align="center" >
+                                                        <b>Monday</b>
+                                                    </td>
+                                                    <td class="table-header" align="center" >
+                                                        <b>Tuesday</b>
+                                                    </td>
+                                                    <td class="table-header" align="center" >
+                                                        <b>Wednesday</b>
+                                                    </td>
+                                                    <td class="table-header" align="center" >
+                                                        <b>Thursday</b>
+                                                    </td>
+
+
+                                                </tr>
+                                                <t t-foreach="get_timetable(o)" t-as="t">
+                                                    <tr>
+                                                        <td class="table-header" align="center" width="20%" >
+                                                            <span t-esc="'{0:,.2f}'.format(t['end_time'])"></span>
+                                                            <span> - </span>
+                                                            <span t-esc="'{0:,.2f}'.format(t['start_time'])"></span>
+                                                        </td>
+
+                                                         <td align="center" >
+                                                            <span t-esc="t.get('saturday')"></span>
+                                                        </td>
+                                                        <td align="center" >
+                                                            <span t-esc="t.get('sunday')"></span>
+                                                        </td>
+                                                        <td align="center" >
+                                                            <span t-esc="t.get('monday')"></span>
+                                                        </td>
+                                                        <td align="center" >
+                                                            <span t-esc="t.get('tuesday')"></span>
+                                                        </td>
+                                                        <td align="center" >
+                                                            <span t-esc="t.get('wednesday')"></span>
+                                                        </td>
+                                                        <td align="center" >
+                                                            <span t-esc="t.get('thursday')"></span>
+                                                        </td>
+
+
+                                                    </tr>
+                                                </t>
+                                            </table>
+                                        </t>
+                                        <t t-if="o.timetable_type == 'exam'">
+                                            <br/>
+                                            <table width="100%" style="border: 2px solid black;">
+                                                <tr>
+                                                    <td width="15%" align="center" >
+                                                        <b>Exam Date Time</b>
+                                                    </td>
+                                                    <td align="center" >
+                                                        <b>WeekDay</b>
+                                                    </td>
+                                                    <td align="center" >
+                                                        <b>Subject</b>
+                                                    </td>
+                                                </tr>
+                                                <t t-foreach="o.exam_timetable_line_ids" t-as="t">
+                                                    <tr>
+                                                        <td align="center" >
+                                                            <span t-field="t.exm_date" t-options="{'format': 'dd - MM - yyyy'}"></span>
+                                                            <br />
+                                                            <span t-esc="'{0:,.2f}'.format(t['start_time'])"></span>
+                                                            <span>-</span>
+                                                            <span t-esc="'{0:,.2f}'.format(t['end_time'])"></span>
+                                                        </td>
+                                                        <td align="center" style="margin-top: 16px; font-size: 16px;border: 2px solid black;">
+                                                            <span t-field="t.day_of_week" style="text-align: center;vertical-align: middle;" />
+                                                        </td>
+                                                        <td align="center" style="margin-top: 16px; font-size: 16px;border: 2px solid black;">
+                                                            <span t-field="t.subject_id.name" style="text-align: center;vertical-align: middle;" />
+                                                        </td>
+                                                    </tr>
+                                                </t>
+                                            </table>
+                                        </t>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>

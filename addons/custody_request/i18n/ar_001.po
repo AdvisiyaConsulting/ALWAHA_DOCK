@@ -1,0 +1,290 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * custody_request
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-03 18:42+0000\n"
+"PO-Revision-Date: 2024-02-03 18:42+0000\n"
+"Last-Translator: gpt-po v1.0.11\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#: model:ir.actions.act_window,name:custody_request.custody_request_ac
+#. module: custody_request
+msgid "All Petty Cash"
+msgstr "كل العهد المالية"
+
+#: model:ir.model.fields,field_description:custody_request.field_custody_request__amount
+#: model:ir.model.fields,field_description:custody_request.field_expenses_line__amount
+#. module: custody_request
+msgid "Amount"
+msgstr "المبلغ"
+
+#: model:ir.model.fields,help:custody_request.field_expenses_line__document
+#. module: custody_request
+msgid "Attached Document"
+msgstr "المستند المرفق"
+
+#: model:ir.model.fields,field_description:custody_request.field_expenses_line__document
+#. module: custody_request
+msgid "Attachement"
+msgstr "المرفق"
+
+#: model:ir.model.fields,field_description:custody_request.field_custody_request__attachment
+#. module: custody_request
+msgid "Attachments / المرفقات"
+msgstr "وثيقة"
+
+#: model:ir.model.fields,field_description:custody_request.field_custody_request__electronig
+#. module: custody_request
+msgid "Cheque"
+msgstr "شيك"
+
+#: model:ir.model.fields,field_description:custody_request.field_custody_request__check_date
+#. module: custody_request
+msgid "Cheque Date"
+msgstr "تاريخ الشيك"
+
+#: model:ir.model.fields,field_description:custody_request.field_custody_request__cheque_number
+#. module: custody_request
+msgid "Cheque number"
+msgstr "رقم الشيك"
+
+#: model:ir.model.fields.selection,name:custody_request.selection__expenses_line__expenses_type__classroom
+#. module: custody_request
+msgid "Classroom supplies"
+msgstr "مستلزمات الفصل الدراسي"
+
+#: model:ir.model.fields.selection,name:custody_request.selection__expenses_line__expenses_type__communication
+#. module: custody_request
+msgid "Communication expenses (telephone, internet)"
+msgstr "نفقات الاتصالات (الهاتف، الإنترنت)"
+
+#: model:ir.model.fields,field_description:custody_request.field_custody_request__company_id
+#: model:ir.model.fields,field_description:custody_request.field_expenses_line__company_id
+#. module: custody_request
+msgid "Company"
+msgstr "الشركة"
+
+#: model:ir.model.fields.selection,name:custody_request.selection__expenses_line__expenses_type__construction
+#. module: custody_request
+msgid "Construction or renovation costs"
+msgstr "تكاليف البناء أو التجديد"
+
+#: model:ir.model.fields,field_description:custody_request.field_custody_request__create_uid
+#: model:ir.model.fields,field_description:custody_request.field_expenses_line__create_uid
+#. module: custody_request
+msgid "Created by"
+msgstr "تم إنشاؤه بواسطة"
+
+#: model:ir.model.fields,field_description:custody_request.field_custody_request__create_date
+#: model:ir.model.fields,field_description:custody_request.field_expenses_line__create_date
+#. module: custody_request
+msgid "Created on"
+msgstr "تم إنشاؤه في"
+
+#: model:ir.model.fields,field_description:custody_request.field_custody_request__currency_id
+#: model:ir.model.fields,field_description:custody_request.field_expenses_line__currency_id
+#. module: custody_request
+msgid "Currency"
+msgstr "العملة"
+
+#: model:ir.model.fields,field_description:custody_request.field_custody_request__user_name
+#. module: custody_request
+msgid "Custodian"
+msgstr "الوصي"
+
+#: model:ir.model.fields,field_description:custody_request.field_custody_request__description
+#: model:ir.model.fields,field_description:custody_request.field_expenses_line__description
+#. module: custody_request
+msgid "Description"
+msgstr "الوصف"
+
+#: model_terms:ir.ui.view,arch_db:custody_request.custody_request_form
+#. module: custody_request
+msgid "Details"
+msgstr "التفاصيل"
+
+#: model:ir.model.fields,field_description:custody_request.field_custody_request__display_name
+#: model:ir.model.fields,field_description:custody_request.field_expenses_line__display_name
+#. module: custody_request
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#: model:ir.model.fields.selection,name:custody_request.selection__expenses_line__expenses_type__educ
+#. module: custody_request
+msgid "Educational software and licenses"
+msgstr "برامج تعليمية وتراخيص"
+
+#: model:ir.model.fields,field_description:custody_request.field_custody_request__custody_end_date
+#. module: custody_request
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#: model:ir.model.fields.selection,name:custody_request.selection__expenses_line__expenses_type__equipment
+#. module: custody_request
+msgid "Equipment purchases"
+msgstr "عمليات شراء المعدات"
+
+#: model:ir.model.fields,field_description:custody_request.field_expenses_line__expenses_type
+#. module: custody_request
+msgid "Expense type"
+msgstr "نوع المصروفات"
+
+#: model:ir.model,name:custody_request.model_expenses_line
+#: model:ir.ui.menu,name:custody_request.expenses_managment_menu
+#. module: custody_request
+msgid "Expenses"
+msgstr "المصروفات"
+
+#: model:ir.ui.menu,name:custody_request.custody_request_root
+#. module: custody_request
+msgid "Expenses Managment"
+msgstr "إدارة المصروفات"
+
+#: model:ir.model.fields,field_description:custody_request.field_custody_request__expense_line_ids
+#: model_terms:ir.ui.view,arch_db:custody_request.custody_request_form
+#. module: custody_request
+msgid "Expenses line"
+msgstr "بند النفقات"
+
+#: model:ir.actions.act_window,name:custody_request.expenses_managment
+#. module: custody_request
+msgid "Expenses managment"
+msgstr "إدارة المصروفات"
+
+#: model:ir.model.fields.selection,name:custody_request.selection__expenses_line__expenses_type__furniture
+#. module: custody_request
+msgid "Furniture and fixtures"
+msgstr "الأثاث والتجهيزات"
+
+#: model:ir.model.fields,field_description:custody_request.field_custody_request__id
+#: model:ir.model.fields,field_description:custody_request.field_expenses_line__id
+#. module: custody_request
+msgid "ID"
+msgstr "الهوية"
+
+#: model:ir.model.fields,field_description:custody_request.field_custody_request____last_update
+#: model:ir.model.fields,field_description:custody_request.field_expenses_line____last_update
+#. module: custody_request
+msgid "Last Modified on"
+msgstr "تم التعديل الأخير في"
+
+#: model:ir.model.fields,field_description:custody_request.field_custody_request__write_uid
+#: model:ir.model.fields,field_description:custody_request.field_expenses_line__write_uid
+#. module: custody_request
+msgid "Last Updated by"
+msgstr "تم التحديث الأخير بواسطة"
+
+#: model:ir.model.fields,field_description:custody_request.field_custody_request__write_date
+#: model:ir.model.fields,field_description:custody_request.field_expenses_line__write_date
+#. module: custody_request
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#: model:ir.model.fields.selection,name:custody_request.selection__expenses_line__expenses_type__maintenance
+#. module: custody_request
+msgid "Maintenance and repairs"
+msgstr "الصيانة والإصلاحات"
+
+#: model_terms:ir.ui.view,arch_db:custody_request.custody_request_search
+#. module: custody_request
+msgid "My Petty cash"
+msgstr "صندوق العهدة المالية الخاص بي"
+
+#: model_terms:ir.ui.view,arch_db:custody_request.expenses_line_search
+#. module: custody_request
+msgid "My expenses"
+msgstr "مصروفاتي"
+
+#: code:addons/custody_request/models/custody_request.py:0
+#. module: custody_request
+#, python-format
+msgid "You are not allowed to add expenses lines for this custody request."
+msgstr "لا يُسمح لك بإضافة  مصروفات لهذه العهد المالية"
+#: model_terms:ir.ui.view,arch_db:custody_request.custody_request_form
+#. module: custody_request
+msgid "Notes"
+msgstr "ملاحظات"
+
+#: model:ir.model.fields,field_description:custody_request.field_custody_request__notes
+#: model:ir.model.fields,field_description:custody_request.field_expenses_line__notes
+#. module: custody_request
+msgid "Notes / ملاحظات "
+msgstr "ملاحظات"
+
+#: model:ir.model.fields.selection,name:custody_request.selection__expenses_line__expenses_type__office
+#. module: custody_request
+msgid "Office supplies"
+msgstr "مستلزمات المكتب"
+
+#: model:ir.model.fields.selection,name:custody_request.selection__expenses_line__expenses_type__other
+#. module: custody_request
+msgid "Other costs"
+msgstr "تكاليف أخرى"
+
+#: model:ir.model.fields,field_description:custody_request.field_expenses_line__custody_id
+#: model:ir.ui.menu,name:custody_request.custody_request
+#. module: custody_request
+msgid "Petty Cash"
+msgstr "العهدة المالية"
+
+#: model:ir.actions.act_window,name:custody_request.custody_request_post
+#. module: custody_request
+msgid "Petty Cash Posted "
+msgstr "تم تسجيل العهدة المالية"
+
+#: model:ir.model,name:custody_request.model_custody_request
+#. module: custody_request
+msgid "Petty Cash Request"
+msgstr "طلب صرف النقدية الصغيرة"
+
+#: model:ir.model.fields,field_description:custody_request.field_custody_request__name
+#: model:ir.model.fields,field_description:custody_request.field_expenses_line__name
+#. module: custody_request
+msgid "Reference"
+msgstr "المرجع"
+
+#: model:ir.model.fields,field_description:custody_request.field_custody_request__school_id
+#: model:ir.model.fields,field_description:custody_request.field_expenses_line__school_id
+#. module: custody_request
+msgid "School"
+msgstr "المدرسة"
+
+#: model:ir.model.fields,help:custody_request.field_custody_request__school_id
+#: model:ir.model.fields,help:custody_request.field_expenses_line__school_id
+#. module: custody_request
+msgid "Select school"
+msgstr "اختر مدرسة"
+
+#: model:ir.model.fields,field_description:custody_request.field_custody_request__sequence
+#. module: custody_request
+msgid "Sequence"
+msgstr "تسلسل"
+
+#: model:ir.model.fields,field_description:custody_request.field_custody_request__custody_start_date
+#. module: custody_request
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#: model:ir.model.fields.selection,name:custody_request.selection__expenses_line__expenses_type__utilities
+#. module: custody_request
+msgid "Utilities (electricity, water, gas)"
+msgstr "الخدمات العامة (الكهرباء، الماء، الغاز)"
+
+#: model_terms:ir.ui.view,arch_db:custody_request.custody_request_tree
+#: model_terms:ir.ui.view,arch_db:custody_request.expenses_line_tree
+#. module: custody_request
+msgid "total amount"
+msgstr "المبلغ الإجمالي"
+
+#: model_terms:ir.ui.view,arch_db:custody_request.custody_request_form
+#. module: custody_request
+msgid "عهدة جديدة"
+msgstr "عهدة جديدة"

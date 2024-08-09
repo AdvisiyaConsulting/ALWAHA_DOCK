@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="school.web_login" inherit_id="web.login" name="Extended Login">
+        <xpath expr="//form" position="before">
+        </xpath>
+        <xpath expr="//form/div[@class='form-group field-db']" position="replace">
+        </xpath>
+        <xpath expr="//form[@class='oe_login_form']" position="replace">
+
+
+            <style>
+                .card-body {
+                border-radius: 150px;
+
+                }
+
+                .btn-primary {
+                background-color: #9C885E;
+                border-color: #9C885E;
+                }
+
+                .btn-primary:hover {
+                background-color: #9C885E;
+                border-color: #806d47;
+                }
+
+                a {
+                color: #9C885E;
+                size-font: 12px;
+                }
+
+                a:hover {
+                color: #806d47;
+                }
+
+                .bg-100 {
+                background:
+                linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
+                url("https://i.ibb.co/BGgXnbR/wallpaperflare-com-wallpaper.jpg") center center/cover no-repeat
+                !important;
+                }
+
+                label, input {
+                font-size: 18px;
+
+                }
+
+                .card-body {
+                width: 600px !important;
+                }
+
+                .card {
+                width: 600px !important;
+                max-width: 600px !important;
+                }
+
+            </style>
+            <form class="oe_login_form" role="form" t-attf-action="/web/login" method="post"
+                  onsubmit="this.action = this.action + location.hash">
+
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+
+
+                <div class="form-group field-login" >
+                    <label for="login" >البريد الإلكتروني</label>
+                    <input type="text" placeholder="Email" name="login" class="form-control form-control-sm"
+                           t-att-value="login" id="login"
+                           required="required" autofocus="autofocus" autocapitalize="off"/>
+
+                </div>
+                <div class="form-group field-password pt-2">
+                    <label for="password">كلمة المرور</label>
+                    <input type="password" name="password" id="password" class="form-control form-control-sm"
+                           required="required" t-att-autofocus="'autofocus' if only_passwords else None"/>
+                </div>
+                <div t-attf-class="clearfix oe_login_buttons text-center mb-1 {{'pt-2' if form_small else 'pt-3'}}">
+                    <button type="submit" class="btn btn-primary btn-block">تسجيل الدخول</button>
+
+                </div>
+            </form>
+        </xpath>
+    </template>
+
+    <!-- RESET PASSWORD Template-->
+    <template id="school.reset_password" name="Reset password" inherit_id="auth_signup.reset_password">
+
+            <xpath expr="//form[@class='oe_reset_password_form']" position="replace">
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Mirza:wght@400;600&amp;display=swap');
+
+
+                .card-body {
+                border-radius: 150px;
+
+                }
+
+                .btn-primary {
+                background-color: #9C885E;
+                border-color: #9C885E;
+                }
+
+                .btn-primary:hover {
+                background-color: #9C885E;
+                border-color: #806d47;
+                }
+
+                a {
+                color: #9C885E;
+                size-font: 12px;
+                }
+
+                a:hover {
+                color: #806d47;
+                }
+
+                .bg-100 {
+                background:
+                linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0)),
+                url("https://i.ibb.co/BGgXnbR/wallpaperflare-com-wallpaper.jpg") center center/cover no-repeat
+                !important;
+                }
+
+                label, input {
+                font-size: 18px
+                }
+
+                label {
+                    width: 100%;
+                    text-align: right;
+                }
+
+                label, a {
+                    font-family: 'Mirza', serif;
+                }
+
+                .card-body {
+                width: 600px !important;
+                }
+
+                .card {
+                width: 600px !important;
+                max-width: 600px !important;
+                }
+                </style>
+            <form class="oe_reset_password_form" role="form" method="post" t-if="not message">
+
+                <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                    <t t-if="token and not invalid_token">
+                        <t t-call="auth_signup.fields">
+                            <t t-set="only_passwords" t-value="1"/>
+                        </t>
+                    </t>
+                   <t t-if="not token">
+                        <div class="form-group field-login">
+                            <label for="login" class="col-form-label">البريد الإلكتروني</label>
+                            <input type="text" name="login" t-att-value="login" id="login" class="form-control"
+                                autofocus="autofocus" required="required" autocapitalize="off"/>
+                        </div>
+                    </t>
+
+                    <p class="alert alert-danger" t-if="error" role="alert">
+                        <t t-esc="error"/>
+                    </p>
+                    <input type="hidden" name="redirect" t-att-value="redirect"/>
+                    <input type="hidden" name="token" t-att-value="token"/>
+                    <div class="clearfix oe_login_buttons">
+                        <button type="submit" class="btn btn-primary btn-block">تسجيل الدخول</button>
+                        <div class="d-flex justify-content-between align-items-center small mt-2">
+                            <a t-if="not token" t-attf-href="/web/login?{{ keep_query() }}">Back to Login</a>
+                            <a t-if="invalid_token" href="/web/login">Back to Login</a>
+                        </div>
+                        <div class="o_login_auth"/>
+                    </div>
+            </form>
+            </xpath>
+
+
+    </template>
+
+
+</odoo>

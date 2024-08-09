@@ -1,0 +1,54 @@
+// column styles
+table tr td, table tr th {
+  text-align: right !important;
+}
+
+.o_column_sortable, .o_badge_cell {
+  text-align: right !important;
+}
+
+// Arabic layout styles
+* {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+// search bar styles
+.fa.fa-sm.fa-remove.o_facet_remove{
+  position: relative !important;
+  padding: 0 !important;
+}
+
+.o_searchview_input{
+    padding: 4px 10px 0 0 !important;
+}
+
+.o_searchview_facet_label {
+    padding: 0 10px !important;
+}
+
+div.o_facet_values {
+  padding: 3px 18px 0 5px !important;
+}
+
+// avatar styles
+.o_field_image.o_field_widget.o_kanban_image_fill_left {
+    margin-right: 0 !important;
+    margin-left: 16px !important;
+}
+
+.o_user_avatar {
+  margin-right: 0 !important;
+  margin-left: 5px !important;
+}
+
+//icon styles
+i {
+    margin-left: 5px;
+}
+
+// arrow styles
+.btn.o_arrow_button.btn-primary.disabled
+{
+  margin-right: 20px;
+}

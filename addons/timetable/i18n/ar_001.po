@@ -1,0 +1,411 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * timetable
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 15.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-01 19:11+0000\n"
+"PO-Revision-Date: 2024-02-01 19:11+0000\n"
+"Last-Translator: gpt-po v1.0.11\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#: model:ir.actions.report,print_report_name:timetable.report_time_table_qweb
+#. module: timetable
+msgid "'Timetable(%s)'%object.standard_id.name"
+msgstr "'جدول المواعيد (%s)' %object.standard_id.name"
+
+#: model_terms:ir.ui.view,arch_db:timetable.timetable
+#. module: timetable
+msgid "<b>Academic Year</b>"
+msgstr "<b>السنة الأكاديمية</b>"
+
+#: model_terms:ir.ui.view,arch_db:timetable.timetable
+#. module: timetable
+msgid "<b>Division</b>"
+msgstr "<b>القسم</b>"
+
+#: model_terms:ir.ui.view,arch_db:timetable.timetable
+#. module: timetable
+msgid "<b>Exam Date Time</b>"
+msgstr "<b>تاريخ ووقت الامتحان</b>"
+
+#: model_terms:ir.ui.view,arch_db:timetable.timetable
+#. module: timetable
+msgid "<b>Friday</b>"
+msgstr "<b>الجمعة</b>"
+
+#: model_terms:ir.ui.view,arch_db:timetable.timetable
+#. module: timetable
+msgid "<b>Monday</b>"
+msgstr "الاثنين"
+
+#: model_terms:ir.ui.view,arch_db:timetable.timetable
+#. module: timetable
+msgid "<b>Saturday</b>"
+msgstr "<b>السبت</b>"
+
+#: model_terms:ir.ui.view,arch_db:timetable.timetable
+#. module: timetable
+msgid "<b>Sunday</b>"
+msgstr "<b>الأحد</b>"
+
+#: model_terms:ir.ui.view,arch_db:timetable.timetable
+#. module: timetable
+msgid "<b>Standard</b>"
+msgstr "<b>المستوى</b>"
+
+#: model_terms:ir.ui.view,arch_db:timetable.timetable
+#. module: timetable
+msgid "<b>Subject</b>"
+msgstr "<b>الموضوع</b>"
+
+#: model_terms:ir.ui.view,arch_db:timetable.timetable
+#. module: timetable
+msgid "<b>Thursday</b>"
+msgstr "<b>الخميس</b>"
+
+#: model_terms:ir.ui.view,arch_db:timetable.timetable
+#. module: timetable
+msgid "<b>Time</b>"
+msgstr "<b>الوقت</b>"
+
+#: model_terms:ir.ui.view,arch_db:timetable.timetable
+#. module: timetable
+msgid "<b>Tuesday</b>"
+msgstr "<b>الثلاثاء</b>"
+
+#: model_terms:ir.ui.view,arch_db:timetable.timetable
+#. module: timetable
+msgid "<b>Wednesday</b>"
+msgstr "الأربعاء"
+
+#: model_terms:ir.ui.view,arch_db:timetable.timetable
+#. module: timetable
+msgid "<b>WeekDay</b>"
+msgstr "<b>يوم الأسبوع</b>"
+
+#: model_terms:ir.ui.view,arch_db:timetable.timetable
+#. module: timetable
+msgid "<span> - </span>"
+msgstr ""
+
+#: model_terms:ir.ui.view,arch_db:timetable.timetable
+#. module: timetable
+msgid "<span>-</span>"
+msgstr "<span>-</span>"
+
+#: model:ir.model.fields,field_description:timetable.field_time_table__standard_id
+#: model_terms:ir.ui.view,arch_db:timetable.timetable_search
+#. module: timetable
+msgid "Academic Class"
+msgstr "الصف الأكاديمي"
+
+#: model_terms:ir.ui.view,arch_db:timetable.timetable_search
+#. module: timetable
+msgid "By class"
+msgstr "حسب الفصل"
+
+#: model_terms:ir.ui.view,arch_db:timetable.timetable_search
+#. module: timetable
+msgid "By year"
+msgstr "حسب السنة"
+
+#: model:ir.model.fields,help:timetable.field_time_table_line__class_room_id
+#. module: timetable
+msgid "Class room in which time table would be followed"
+msgstr "الصف الدراسي الذي سيتم اتباع جدول الحصص فيه"
+
+#: model:ir.model.fields,help:timetable.field_time_table__class_room_id
+#. module: timetable
+msgid "Class room in which tome table would be followed"
+msgstr "الصف الدراسي الذي سيتم اتباعه فيه جدول زمني"
+
+#: model:ir.model.fields,field_description:timetable.field_time_table__create_uid
+#: model:ir.model.fields,field_description:timetable.field_time_table_line__create_uid
+#. module: timetable
+msgid "Created by"
+msgstr "تم إنشاؤه بواسطة"
+
+#: model:ir.model.fields,field_description:timetable.field_time_table__create_date
+#: model:ir.model.fields,field_description:timetable.field_time_table_line__create_date
+#. module: timetable
+msgid "Created on"
+msgstr "تم إنشاؤه في"
+
+#: model:ir.model.fields,field_description:timetable.field_time_table__name
+#. module: timetable
+msgid "Description"
+msgstr "الوصف"
+
+#: model:ir.model.fields,field_description:timetable.field_time_table__display_name
+#: model:ir.model.fields,field_description:timetable.field_time_table_line__display_name
+#. module: timetable
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#: model:ir.model.fields,field_description:timetable.field_time_table_line__end_time
+#. module: timetable
+msgid "End Time"
+msgstr "وقت الانتهاء"
+
+#: model_terms:ir.ui.view,arch_db:timetable.view_time_table_form
+#. module: timetable
+msgid "Enter Description"
+msgstr "أدخل الوصف"
+
+#: model:ir.model.fields,help:timetable.field_time_table__name
+#. module: timetable
+msgid "Enter description of timetable"
+msgstr "Please provide a description of the timetable."
+
+#: model:ir.model.fields,help:timetable.field_time_table__timetable_ids
+#. module: timetable
+msgid "Enter the timetable pattern"
+msgstr "أدخل نمط الجدول الزمني"
+
+#: model_terms:ir.ui.view,arch_db:timetable.timetable
+#. module: timetable
+msgid "Exam Timetable"
+msgstr "جدول الامتحانات"
+
+#: model:ir.model.fields,field_description:timetable.field_time_table_line__teacher_id
+#. module: timetable
+msgid "Faculty Name"
+msgstr "اسم المعلم"
+
+#: model:ir.model.fields.selection,name:timetable.selection__time_table_line__week_day__friday
+#. module: timetable
+msgid "Friday"
+msgstr "الجمعة"
+
+#: model_terms:ir.ui.view,arch_db:timetable.timetable_search
+#. module: timetable
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#: model:ir.model.fields,field_description:timetable.field_time_table__id
+#: model:ir.model.fields,field_description:timetable.field_time_table_line__id
+#. module: timetable
+msgid "ID"
+msgstr "الهوية"
+
+#: model:ir.model.fields,field_description:timetable.field_time_table____last_update
+#: model:ir.model.fields,field_description:timetable.field_time_table_line____last_update
+#. module: timetable
+msgid "Last Modified on"
+msgstr "تم التعديل الأخير في"
+
+#: model:ir.model.fields,field_description:timetable.field_time_table__write_uid
+#: model:ir.model.fields,field_description:timetable.field_time_table_line__write_uid
+#. module: timetable
+msgid "Last Updated by"
+msgstr "تم التحديث الأخير بواسطة"
+
+#: model:ir.model.fields,field_description:timetable.field_time_table__write_date
+#: model:ir.model.fields,field_description:timetable.field_time_table_line__write_date
+#. module: timetable
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#: model:ir.model.fields.selection,name:timetable.selection__time_table_line__week_day__monday
+#. module: timetable
+msgid "Monday"
+msgstr "الاثنين"
+
+#: model:ir.model.fields.selection,name:timetable.selection__time_table__timetable_type__regular
+#. module: timetable
+msgid "Regular"
+msgstr "منتظم"
+
+#: model:ir.actions.act_window,name:timetable.action_timetable_regular
+#: model:ir.ui.menu,name:timetable.menu_timetable_regular
+#: model_terms:ir.ui.view,arch_db:timetable.timetable
+#. module: timetable
+msgid "Regular Timetable"
+msgstr "جدول زمني"
+
+#: model:ir.model.fields,field_description:timetable.field_time_table__class_room_id
+#: model:ir.model.fields,field_description:timetable.field_time_table_line__class_room_id
+#. module: timetable
+msgid "Room Number"
+msgstr "رقم القاعة"
+
+#: model:ir.model.fields.selection,name:timetable.selection__time_table_line__week_day__saturday
+#. module: timetable
+msgid "Saturday"
+msgstr "السبت"
+
+#: model:ir.model.fields,help:timetable.field_time_table__standard_id
+#: model_terms:ir.ui.view,arch_db:timetable.view_time_table_form
+#. module: timetable
+msgid "Select Standard"
+msgstr "اختر المستوى"
+
+#: model:ir.model.fields,help:timetable.field_time_table_line__subject_id
+#. module: timetable
+msgid "Select Subject"
+msgstr "اختر المادة"
+
+#: model:ir.model.fields,help:timetable.field_time_table_line__teacher_id
+#. module: timetable
+msgid "Select Teacher"
+msgstr "اختر معلماً"
+
+#: model_terms:ir.ui.view,arch_db:timetable.view_time_table_form
+#. module: timetable
+msgid "Select Year"
+msgstr "اختر السنة"
+
+#: model:ir.model.fields,help:timetable.field_time_table__year_id
+#. module: timetable
+msgid "Select academic year"
+msgstr "اختر السنة الأكاديمية"
+
+#: model:ir.model.fields,help:timetable.field_time_table__timetable_type
+#. module: timetable
+msgid "Select time table type"
+msgstr "يرجى اختيار نوع الجدول الزمني"
+
+#: model:ir.model.fields,help:timetable.field_time_table_line__week_day
+#. module: timetable
+msgid "Select weekday for timetable"
+msgstr "اختر يوم الأسبوع للجدول الزمني"
+
+#: model:ir.model.fields,field_description:timetable.field_time_table_line__start_time
+#. module: timetable
+msgid "Start Time"
+msgstr "وقت البدء"
+
+#: code:addons/timetable/models/timetable.py:0
+#. module: timetable
+#, python-format
+msgid "Start and End Time should be less than 24 hours!"
+msgstr "يجب أن يكون وقت البدء والانتهاء أقل من 24 ساعة!"
+
+#: model:ir.model.fields,field_description:timetable.field_time_table_line__subject_id
+#. module: timetable
+msgid "Subject Name"
+msgstr "اسم المادة"
+
+#: model:ir.model,name:timetable.model_subject_subject
+#. module: timetable
+msgid "Subjects"
+msgstr "المواد"
+
+#: model:ir.model.fields.selection,name:timetable.selection__time_table_line__week_day__sunday
+#. module: timetable
+msgid "Sunday"
+msgstr "الأحد"
+
+#: model:ir.model.fields,help:timetable.field_time_table__user_ids
+#. module: timetable
+msgid "Teachers following this timetable"
+msgstr "المعلمون يتبعون هذا الجدول الزمني"
+
+#: code:addons/timetable/models/timetable.py:0
+#. module: timetable
+#, python-format
+msgid "The room is occupied."
+msgstr "القاعة مشغولة."
+
+#: code:addons/timetable/models/timetable.py:0
+#. module: timetable
+#, python-format
+msgid "The subject %s is not assigned to teacher %s."
+msgstr "المادة %s (ة)غير مُسندة للمعلم %s."
+
+#: code:addons/timetable/models/timetable.py:0
+#. module: timetable
+#, python-format
+msgid "There is a lecture of Lecturer %s at same time!"
+msgstr "في نفس الوقت هناك حصة للمعلم(ة) %s! "
+
+#: model:ir.model.fields.selection,name:timetable.selection__time_table_line__week_day__thursday
+#. module: timetable
+msgid "Thursday"
+msgstr "الخميس"
+
+#: model:ir.model,name:timetable.model_time_table
+#. module: timetable
+msgid "Time Table"
+msgstr "جدول الزمن"
+
+#: model:ir.model,name:timetable.model_time_table_line
+#. module: timetable
+msgid "Time Table Line"
+msgstr "جدول زمني"
+
+#: model:ir.model.fields,field_description:timetable.field_time_table__timetable_type
+#. module: timetable
+msgid "Time Table Type"
+msgstr "نوع الجدول الزمني"
+
+#: model:ir.model.fields,help:timetable.field_time_table_line__end_time
+#: model:ir.model.fields,help:timetable.field_time_table_line__start_time
+#. module: timetable
+msgid "Time according to timeformat of 24 hours"
+msgstr "الوقت وفقًا لتنسيق الوقت بنظام 24 ساعة"
+
+#: code:addons/timetable/models/timetable.py:0
+#. module: timetable
+#, python-format
+msgid "Time should not overlap!"
+msgstr "يجب ألا يتداخل الوقت!"
+
+#: model:ir.model.fields,field_description:timetable.field_time_table__timetable_ids
+#: model:ir.model.fields,field_description:timetable.field_time_table_line__table_id
+#: model:ir.ui.menu,name:timetable.menu_timetable_1
+#: model_terms:ir.ui.view,arch_db:timetable.timetable_search
+#: model_terms:ir.ui.view,arch_db:timetable.view_time_table_form
+#: model_terms:ir.ui.view,arch_db:timetable.view_time_table_tree
+#. module: timetable
+msgid "TimeTable"
+msgstr "الجدول الزمني"
+
+#: model:ir.actions.report,name:timetable.report_time_table_qweb
+#. module: timetable
+msgid "Timetable"
+msgstr "الجدول الزمني"
+
+#: model:ir.model,name:timetable.model_report_timetable_timetable
+#. module: timetable
+msgid "Timetable details"
+msgstr "تفاصيل الجدول الزمني"
+
+#: model:ir.model.fields.selection,name:timetable.selection__time_table_line__week_day__tuesday
+#. module: timetable
+msgid "Tuesday"
+msgstr "الثلاثاء"
+
+#: model:ir.model.fields,field_description:timetable.field_time_table__user_ids
+#. module: timetable
+msgid "Users"
+msgstr "المستخدمون"
+
+#: model:ir.model.fields.selection,name:timetable.selection__time_table_line__week_day__wednesday
+#. module: timetable
+msgid "Wednesday"
+msgstr "الأربعاء"
+
+#: model:ir.model.fields,field_description:timetable.field_time_table_line__week_day
+#. module: timetable
+msgid "Week day"
+msgstr "يوم الأسبوع"
+
+#: model:ir.model.fields,field_description:timetable.field_time_table__year_id
+#: model_terms:ir.ui.view,arch_db:timetable.timetable_search
+#. module: timetable
+msgid "Year"
+msgstr "سنة"
+
+#: code:addons/timetable/models/timetable.py:0
+#. module: timetable
+#, python-format
+msgid "You cannot set lecture at same time %s  at same day %s for teacher %s.!"
+msgstr "لا يمكنك تحديد محاضرة في نفس الوقت %s في نفس اليوم %s للمدرس %s!"

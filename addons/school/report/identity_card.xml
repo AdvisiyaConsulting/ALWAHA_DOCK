@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="identity_card">
+
+        <t t-call="web.html_container">
+
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+                    <style>
+                        @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&amp;display=swap");
+                        @import url('https://fonts.googleapis.com/css2?family=Mirza:wght@400;600&amp;display=swap');
+                        * {
+                            margin: 0;
+                            font-family: 'Quicksand', sans-serif;
+                            color: #eeeeee;
+                        }
+
+                        body {
+                            direction: rtl !important;
+                            height: 100vh;
+                        }
+                        h1 {
+                            text-align: center;
+                            color: #eeeee !important;
+                            font-size: 32px;
+                            padding: 15px 0;
+                        }
+
+
+                        .page {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin: 0 auto;
+                        }
+
+                        img {
+                            width: 230px;
+                            height: 230px;
+                            object-fit: cover;
+                            border-radius: 20px;
+                            text-align: center;
+                            margin-left: 30px;
+                            box-shadow: 2px 2px 0px -1px rgba(223,156,20,1);
+                            box-shadow: 5px 5px 0px -1px rgba(255, 180, 29, 1);
+                        }
+
+                        .name {
+                            font-weight: bold;
+                            font-size: 28px;
+                            text-align: center;
+                            margin-left: 6px;
+                            margin-bottom: 8px;
+                        }
+
+                        .card {
+                            width: 650px;
+                            height: 400px;
+                            border-radius: 20px;
+                            background-image: url("https://i.ibb.co/yVKpV2j/id-card-bg.png");
+                            margin: auto;
+                        }
+
+                        .card-body {
+                            width: 650px;
+                            height: 300px;
+                            background-image: url("https://i.ibb.co/LPmYqLt/id-card-bg2.png") !important;
+                            background-size: cover;
+                            padding-top: 20px;
+                            position: relative;
+                        }
+
+                        .arabic {
+                            font-family: 'Mirza', serif;
+                            color: #151515;
+                        }
+
+                        .info {
+                            text-align: right !important;
+                            width: 300px;
+                        }
+
+                        .inscription {
+                            background-color: rgba(223,156,20,0.5);
+                            width: 100%;
+                        }
+
+                        .barcode {
+                            width: 273px;
+                            height: 127px;
+                            position: absolute;
+                            bottom: 20px;
+                            left: 20px;
+                        }
+
+                    </style>
+
+                    <div class="page">
+                        <div class="oe_structure"/>
+
+                        <t t-foreach="o" t-as="student">
+                            <div t-attf-class="${'rtl' if lang.direction == 'rtl' else ''}">
+
+                            <div class="card">
+                            <h1>
+<!--                            <img t-att-src="'data:assets/waha_group_logo.png/png;base64,%s'"/>-->
+                                <strong t-field="student.sudo().school_id.name" />
+                                <span>Student ID card</span>
+                            </h1>
+                            <div class="card-body-container">
+                            <table class="card-body">
+                                <tr>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" rowspan="2">
+                                        <img t-if="student.photo"
+                                            t-att-src="'data:image/png;base64,%s' % to_text(student.photo)"/>
+                                    </td>
+                                    <td>
+                                        <table class="info">
+                                            <tr>
+                                                <td colspan="2">
+                                                    <span class="name arabic" t-field="student.name" />
+                                                    <span class="name arabic" t-field="student.middle" />
+                                                    <span class="name arabic" t-field="student.last" />
+                                                </td>
+                                            </tr>
+                                            <tr class="inscription">
+                                                <td>
+                                                    <strong class="arabic" >رقم التسجيل</strong>
+                                                </td>
+                                                <td>
+                                                    <span class="arabic" t-field="student.roll_no" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong class="arabic" >المعيار</strong>
+                                                </td>
+                                                <td>
+                                                    <span class="arabic" t-field="student.standard_id.standard_id.name"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong class="arabic" >تقسيم</strong>
+                                                </td>
+                                                <td>
+                                                    <span class="arabic" t-field="student.standard_id.division_id.name"/>
+                                                </td>
+                                            </tr>
+                                            <tr>
+<!--                                                to change-->
+                                                <td>
+                                                    <strong class="arabic" >القسم</strong>
+                                                </td>
+                                                <td>
+                                                    <span class="arabic" t-field="student.standard_id.division_id.name"/>
+                                                </td>
+                                            </tr>
+                                            <!--<tr>
+                                                <td>
+                                                    <strong>Medium</strong>
+                                                </td>
+                                                <td>
+                                                    <span class="arabic" t-field="student.medium_id.name" />
+                                                </td>
+                                            </tr>-->
+                                            <tr>
+                                                <td>
+                                                    <strong class="arabic" >تاريخ الميلاد</strong>
+                                                </td>
+                                                <td>
+                                                    <span class="arabic" t-field="student.date_of_birth" />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong class="arabic">فصيلة الدم</strong>
+                                                </td>
+                                                <td>
+                                                    <span class="arabic" t-field="student.blood_group" />
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+                            </div>
+                            </div>
+                        </div>
+                      </t>
+                        <img t-att-src="'data:https://pngimg.com/uploads/barcode/barcode_PNG47.png/png;base64,%s'" class="barcode"/>
+                   </div>
+                </t>
+            </t>
+        </t>
+    </template>
+</odoo>
